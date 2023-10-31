@@ -2,6 +2,9 @@ const octoprint = {
   apikey: "62F0E17AE5E7459D8AC5FE734F1C4331",
   url: "http://192.168.0.25/api",
   async getData() {
+    console.log(moment().format('YYYY MM DD'))
+
+
     const printer = await this.get("printer?history=false&limit=1")
     const job = await this.get("job")
 

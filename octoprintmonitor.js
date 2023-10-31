@@ -2,12 +2,12 @@ Module.register("octoprintmonitor", {
     defaults: {
         text: "Hello World!",
     },
+    startTime: undefined,
     printer: undefined,
     async start() {
         Log.log("Started");
         this.print = await octoprint.getData()
         console.log(this.print)
-        console.log(moment)
     },
     getScripts() {
         return [this.file("octoprint.js"), this.file("utils.js"), "moment.js"]
