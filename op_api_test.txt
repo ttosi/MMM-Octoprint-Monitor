@@ -1,5 +1,0 @@
-curl \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -H "X-Api-Key: 62F0E17AE5E7459D8AC5FE734F1C4331" \
-  -v http://192.168.0.25/api/job
