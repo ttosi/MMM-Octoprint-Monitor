@@ -1,5 +1,5 @@
 const utils = {
-  createProgressBar(title, type, value1, value2, color = "#0000ff") {
+  createIndicator(title, type, value1, value2, color = "#0000ff") {
     const progressContainer = `
       <div>
         <div class="title">${title}</div>
@@ -45,8 +45,6 @@ const utils = {
     return moment.utc(seconds * 1000).format("HH:mm:ss");
   },
   formatDateTime(startDate, seconds) {
-    return moment(startDate)
-      .add(seconds, "secs")
-      .format("MMM D [at] h:mm a")
+    return moment(startDate).add(seconds, "secs").format("MMM D [at] h:mm a");
   }
 };

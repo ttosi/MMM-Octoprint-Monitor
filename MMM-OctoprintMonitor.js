@@ -54,19 +54,19 @@ Module.register("MMM-OctoprintMonitor", {
           </div>
       `;
 
-      const percentComplete = utils.createProgressBar(
+      const percentComplete = utils.createIndicator(
         "COMPLETED",
         "percent",
         Math.ceil(this.printer.precentComplete)
       );
-      const hotendTemp = utils.createProgressBar(
+      const hotendTemp = utils.createIndicator(
         "HOTEND TEMP",
         "temp",
         this.printer.temp.hotend.acutal,
         this.printer.temp.hotend.target,
         "#aa0000"
       );
-      const bedTemp = utils.createProgressBar(
+      const bedTemp = utils.createIndicator(
         "BED TEMP",
         "temp",
         this.printer.temp.bed.actual,
