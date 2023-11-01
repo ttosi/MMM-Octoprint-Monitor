@@ -1,0 +1,19 @@
+{
+  "printing": true,
+  "filename": "NASA Fabric 4x4.gcode",
+  "precentComplete": 0.037191818464077514,
+  "time": {
+      "actual": 278,
+      "left": 6770
+  },
+  "temp": {
+      "hotend": {
+          "acutal": 200.39,
+          "target": 200
+      },
+      "bed": {
+          "actual": 49.97,
+          "target": 50
+      }
+  }
+}

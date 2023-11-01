@@ -1,0 +1,30 @@
+{
+  "job": {
+      "averagePrintTime": 6772.698994748993,
+      "estimatedPrintTime": 6959.166164009886,
+      "filament": {
+          "tool0": {
+              "length": 3009.7319335862994,
+              "volume": 7.239253669681824
+          }
+      },
+      "file": {
+          "date": 1698806928,
+          "display": "NASA Fabric 4x4.gcode",
+          "name": "NASA Fabric 4x4.gcode",
+          "origin": "local",
+          "path": "NASA Fabric 4x4.gcode",
+          "size": 6022830
+      },
+      "lastPrintTime": 6772.698994748993,
+      "user": "ttosi"
+  },
+  "progress": {
+      "completion": 1.739066186493725,
+      "filepos": 104741,
+      "printTime": 885,
+      "printTimeLeft": 6148,
+      "printTimeLeftOrigin": "genius"
+  },
+  "state": "Printing"
+}
