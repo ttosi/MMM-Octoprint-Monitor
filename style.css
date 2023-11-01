@@ -1,17 +1,20 @@
 .main-container {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 
 .progress-container {
   width: 125px;
-  margin:10px;
+  margin-left: 10px; 
+  margin-right: 10px;
+
 }
 
 .progress-text {
+  font-size: 16px;
   position: relative;
-  top: -78px; 
+  top: -82px;
   font-weight: bold;
 }
 
@@ -30,26 +33,20 @@
   stroke: #1a2c34;
 }
 
-[class^="progress-bar"] {
+/* [class^="progress-bar"] {
   fill: none;
   stroke-width: 10px;
   stroke-linecap: round;
   transform: rotate(-45deg);
   transform-origin: 50% 50%;
-}
+} */
 
 .progress-bar {
-  stroke-dasharray: 360;
-  stroke-dashoffset: 250;
-  stroke: lightskyblue;
-  animation: progress-anim 1s ease-out;
-}
-
-@keyframes progress-anim {
-  from {
-    stroke-dashoffset: 360;
-  }
-  to {
-    stroke-dashoffset: 250;
-  }
+  stroke-dasharray: 359;
+  /* stroke-dashoffset: 180; */
+  fill: none;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }

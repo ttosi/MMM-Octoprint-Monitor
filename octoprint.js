@@ -5,17 +5,26 @@ const octoprint = {
     // const printer = await this.get("printer?history=false&limit=1");
     // const job = await this.get("job");
 
-    // printer is: not on, not connected, or not printing
-    // if (printer.error || !printer.state.flags.printing) {
-    //   return false;
+    // // printer is off or not connected
+    // if (printer.error) {
+    //   return {
+    //     state: "Offline",
+    //     printing: false
+    //   };
+    // }
+
+    // // printer is on but not printing
+    // if (!printer.state.flags.printing) {
+    //   return {
+    //     state: "Idle",
+    //     printing: false
+    //   }
     // }
 
     // return {
+    //   printing: true,
     //   filename: job.job.file.name,
-    //   state: ????????????,
-    //   datetimeToComplete: job.job.estimatedPrintTime,
     //   precentComplete: job.progress.completion,
-    //   endDateTime: "", // calculated
     //   time: {
     //     estimated: job.estimatedPrintTime,
     //     actual: job.progress.printTime,
@@ -34,10 +43,10 @@ const octoprint = {
     // }
 
     return {
+      printing: true,
       filename: "test-print.gcode",
       datetimeToComplete: 5000,
-      precentComplete: 0.76,
-      endDateTime: "", // calculated
+      precentComplete: 76,
       time: {
         estimated: 1000,
         actual: 1125,
@@ -45,30 +54,15 @@ const octoprint = {
       },
       temp: {
         hotend: {
-          acutal: 211,
+          acutal: 90,
           target: 210
         },
         bed: {
-          actual: 59,
+          actual: 10,
           target: 60
         }
       }
     };
-  },
-  async connect() {
-    // const conn = await fe
-    // POST /api/connection HTTP/1.1
-    // Host: example.com
-    // Content-Type: application/json
-    // X-Api-Key: abcdef...
-    // {
-    //   "command": "connect",
-    //   "port": "/dev/ttyACM0",
-    //   "baudrate": 115200,
-    //   "printerProfile": "my_printer_profile",
-    //   "save": true,
-    //   "autoconnect": true
-    // }
   },
   async get(endpoint) {
     return fetch(`${this.url}/${endpoint}`, {
