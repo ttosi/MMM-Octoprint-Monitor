@@ -42,7 +42,7 @@
 } */
 
 .progress-bar {
-  stroke-dasharray: 359;
+  stroke-dasharray: 360;
   /* stroke-dashoffset: 180; */
   fill: none;
   stroke-width: 10px;

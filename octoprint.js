@@ -46,7 +46,7 @@ const octoprint = {
       printing: true,
       filename: "test-print.gcode",
       datetimeToComplete: 5000,
-      precentComplete: 76,
+      precentComplete: 100,
       time: {
         estimated: 1000,
         actual: 1125,
