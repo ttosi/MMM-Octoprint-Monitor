@@ -25,7 +25,6 @@ const utils = {
       case "percent":
         return value1;
       case "temp":
-        console.log("temp", ((value1 - 20) / (260 - 20)) * (100 - 1) + 1);
         return ((value1 - 20) / (value2 - 20)) * (100 - 1) + 1;
     }
   },
@@ -41,5 +40,13 @@ const utils = {
       default:
         return value1;
     }
+  },
+  formatHoursMinsSecs(seconds) {
+    return moment.utc(seconds * 1000).format("HH:mm:ss");
+  },
+  formatDateTime(startDate, seconds) {
+    return moment(startDate)
+      .add(seconds, "secs")
+      .format("MMM D [at] h:mm a")
   }
 };

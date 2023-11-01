@@ -1,6 +1,28 @@
+.info-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.info-row {
+  display: flex-col;
+  font-size: 17px;
+}
+
+.info-label {
+  display: flex;
+  justify-content: end;
+}
+
+.info-value {
+  display: flex;
+  justify-content: left;
+  color: #ddd
+}
+
 .main-container {
   display: flex;
-  gap: 35px;
+  gap: 25px;
   justify-content: center;
 }
 
