@@ -54,11 +54,11 @@ const octoprint = {
       },
       temp: {
         hotend: {
-          acutal: 90,
+          acutal: 30,
           target: 210
         },
         bed: {
-          actual: 10,
+          actual: 28,
           target: 60
         }
       }

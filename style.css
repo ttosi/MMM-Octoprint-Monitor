@@ -1,52 +1,43 @@
 .main-container {
   display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+
+.wrap-circles {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background: #000;
 }
 
-.progress-container {
-  width: 125px;
-  margin-left: 10px; 
-  margin-right: 10px;
-
-}
-
-.progress-text {
-  font-size: 16px;
+.circle {
   position: relative;
-  top: -82px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #ffcdb2;
+  overflow: hidden;
+}
+
+.circle .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 108px;
+  height: 108px;
+  background: #000;
+  border-radius: 50%;
+  font-size: 16px;
   font-weight: bold;
 }
 
-.progress-title {
+.title {
   font-size: 16px;
-}
-
-.progress-svg {
-  width: 114px;
-  height: 114px;
-}
-
-.progress-bg {
-  fill: none;
-  stroke-width: 10px;
-  stroke: #1a2c34;
-}
-
-/* [class^="progress-bar"] {
-  fill: none;
-  stroke-width: 10px;
-  stroke-linecap: round;
-  transform: rotate(-45deg);
-  transform-origin: 50% 50%;
-} */
-
-.progress-bar {
-  stroke-dasharray: 360;
-  /* stroke-dashoffset: 180; */
-  fill: none;
-  stroke-width: 10px;
-  stroke-linecap: round;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
+  margin-bottom: 4px;
 }
