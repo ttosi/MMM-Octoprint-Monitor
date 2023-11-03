@@ -115,30 +115,6 @@ const octoprint = {
         }
       }
     };
-
-    
-
-    // return {
-    //   printing: true,
-    //   filename: "test.gcode",
-    //   datetimeToComplete: 5000,
-    //   precentComplete: 100,
-    //   time: {
-    //     estimated: 1000,
-    //     actual: 1125,
-    //     left: 500
-    //   },
-    //   temp: {
-    //     hotend: {
-    //       acutal: 30,
-    //       target: 210
-    //     },
-    //     bed: {
-    //       actual: 28,
-    //       target: 60
-    //     }
-    //   }
-    // };
   },
   async get(endpoint) {
     return fetch(`${this.url}/${endpoint}`, {
