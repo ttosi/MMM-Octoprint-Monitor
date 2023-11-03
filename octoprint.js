@@ -9,11 +9,23 @@ const octoprint = {
 
     // // printer is off or not connected
     // if (printer.error) {
+<<<<<<< HEAD
+=======
     //   return {
     //     state: "Offline",
     //     printing: false
     //   };
     // }
+
+    // // printer is on but not printing
+    // if (!printer.state.flags.printing) {
+>>>>>>> parent of 0e98e9b (update)
+    //   return {
+    //     state: "Offline",
+    //     printing: false
+    //   };
+    // }
+<<<<<<< HEAD
 
     // printer is on but not printing
     if (!printer.state.flags.printing) {
@@ -62,6 +74,48 @@ const octoprint = {
       }
     };
 
+=======
+    const printer = {
+      sd: {
+        ready: false
+      },
+      state: {
+        error: "",
+        flags: {
+          cancelling: false,
+          closedOrError: false,
+          error: false,
+          finishing: false,
+          operational: true,
+          paused: false,
+          pausing: false,
+          printing: true,
+          ready: false,
+          resuming: false,
+          sdReady: false
+        },
+        text: "Printing"
+      },
+      temperature: {
+        W: {
+          actual: 0,
+          offset: 0,
+          target: null
+        },
+        bed: {
+          actual: 32,
+          offset: 0,
+          target: 0
+        },
+        tool0: {
+          actual: 28,
+          offset: 0,
+          target: 0
+        }
+      }
+    };
+
+>>>>>>> parent of 0e98e9b (update)
     const job = {
       job: {
         averagePrintTime: 6772.698994748993,
