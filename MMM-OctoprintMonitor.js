@@ -5,7 +5,7 @@ Module.register("MMM-OctoprintMonitor", {
     Log.log("Started: MMM-OctoprintMonitor");
     const self = this;
     setInterval(() => {
-      self.getDom();
+      self.updateDom();
     }, 1000);
   },
   getStyles() {
