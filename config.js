@@ -10,18 +10,57 @@ let config = {
 	language: "en",
 	locale: "en-US",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR", "DEBUG"],
-	timeFormat: 24,
-	units: "metric",
+	timeFormat: 12,
+	units: "imperial",
 
 	modules: [
+		{
+			module: "clock",
+			position: "top_center",
+			config: {
+				displaySeconds: false
+			}
+		},
+		{
+			module: "weather",
+			position: "top_left",
+			config: {
+				weatherProvider: "openweathermap",
+				type: "forecast",
+				location: "Tucson",
+				locationID: "5318313",
+				roundTemp: true,
+				showHumidity: true,
+				showFeelsLike: false,
+				showSun: false,
+				showUVIndex: true,
+				maxEntries: 10,
+				maxNumberOfDays: 10,
+				showWindDirectionAsArrow: true,
+				apiKey: "ae6dbaf77e2819425bc0237b0b9a26b1"
+			}
+		},
+		{
+			module: "weather",
+			position: "upper_third",
+			config: {
+				weatherProvider: "openweathermap",
+				type: "current",
+				location: "Tucson",
+				locationID: "5318313",
+				roundTemp: true,
+				showHumidity: true,
+				showFeelsLike: false,
+				showSun: false,
+				showUVIndex: true,
+				showWindDirectionAsArrow: true,
+				apiKey: "ae6dbaf77e2819425bc0237b0b9a26b1"
+			}
+		},
 		{
 			module: "MMM-OctoprintMonitor",
 			position: "bottom_bar"
 		},
-		//		{
-		//			module: "MMM-Playground",
-		//			position: "top_left"
-		//		},
 	]
 };
 
