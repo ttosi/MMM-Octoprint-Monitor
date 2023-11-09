@@ -12,12 +12,13 @@
 .info-label {
   display: flex;
   justify-content: end;
+  color: #fff;
 }
 
 .info-value {
   display: flex;
   justify-content: left;
-  color: #ddd
+  color: #fff
 }
 
 .main-container {
