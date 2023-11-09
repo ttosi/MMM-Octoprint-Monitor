@@ -30,13 +30,8 @@ let config = {
 				location: "Tucson",
 				locationID: "5318313",
 				roundTemp: true,
-				showHumidity: true,
 				showFeelsLike: false,
 				showSun: false,
-				showUVIndex: true,
-				maxEntries: 10,
-				maxNumberOfDays: 10,
-				showWindDirectionAsArrow: true,
 				apiKey: "ae6dbaf77e2819425bc0237b0b9a26b1"
 			}
 		},
