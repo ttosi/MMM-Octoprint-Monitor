@@ -23,7 +23,7 @@ let config = {
 		},
 		{
 			module: "weather",
-			position: "top_left",
+			position: "top_right",
 			config: {
 				weatherProvider: "openweathermap",
 				type: "forecast",
@@ -42,7 +42,7 @@ let config = {
 		},
 		{
 			module: "weather",
-			position: "upper_third",
+			position: "top_left",
 			config: {
 				weatherProvider: "openweathermap",
 				type: "current",
