@@ -1,6 +1,7 @@
 Module.register("MMM-OctoprintMonitor", {
   defaults: {},
   printer: undefined,
+  startDateTime: undefined,
   start: function () {
     Log.log("Started: MMM-OctoprintMonitor");
     const self = this;
@@ -22,9 +23,10 @@ Module.register("MMM-OctoprintMonitor", {
     container.classList.add("main-container");
 
     if (!this.printer.printing) {
-      const stateText = document.createElement("div");
-      stateText.innerHTML = `Printer ${this.printer.state}`;
-      container.appendChild(stateText);
+      const state = document.createElement("div");
+      state.innerHTML = `Printer ${this.printer.state}`;
+      container.appendChild(state);
+      this.startDateTime = new Date();
     } else {
       const infoPanel = `
           <div class="info-container">
@@ -47,7 +49,7 @@ Module.register("MMM-OctoprintMonitor", {
                 this.printer.time.remaining
               )}</div>
               <div class="info-value">${utils.formatDateTime(
-                this.printer.startDate,
+                this.startDateTime,
                 this.printer.time.estimated
               )}</div>
             </div>
@@ -57,7 +59,7 @@ Module.register("MMM-OctoprintMonitor", {
       const percentComplete = utils.createIndicator(
         "COMPLETED",
         "percent",
-        Math.ceil(this.printer.precentComplete)
+        Math.floor(this.printer.precentComplete)
       );
       const hotendTemp = utils.createIndicator(
         "HOTEND TEMP",

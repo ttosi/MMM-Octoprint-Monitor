@@ -44,7 +44,9 @@ const utils = {
   formatHoursMinsSecs(seconds) {
     return moment.utc(seconds * 1000).format("HH:mm:ss");
   },
-  formatDateTime(startDate, seconds) {
-    return moment(startDate).add(seconds, "secs").format("MMM D [at] h:mm a");
+  formatDateTime(startDateTine, seconds) {
+    console.log(startDateTine, seconds)
+    console.log(moment(startDateTine).add(seconds, "seconds").format("MMM D [at] h:mm a"))
+    return moment(startDateTine).add(seconds, "seconds").format("MMM D [at] h:mm a");
   }
 };
