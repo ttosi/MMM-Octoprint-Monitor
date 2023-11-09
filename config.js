@@ -59,7 +59,7 @@ let config = {
 		},
 		{
 			module: "MMM-OctoprintMonitor",
-			position: "bottom_bar"
+			position: "middle_center"
 		},
 	]
 };
